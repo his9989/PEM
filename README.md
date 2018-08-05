@@ -1,3 +1,3 @@
 # PEM
 
-## PEM's seminar
+## PEM_lab's seminar
