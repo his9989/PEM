@@ -3,6 +3,7 @@
 <hr>
 
 ## [Time1] : 기업 현장에서의 데이터 과학
+### 발표자 : 조동환 (SKT DT 추진단장)
 ### 발표자가 6년간 구축한 데이터사이언스 처리 과정 (사진 자료 有)
 * 데이터 과학 = 기술 + 변형 적용 <br>
 * 발표자가 새로운 데이터 관리 조직을 만들어서 6년간 구축한 결과
@@ -35,5 +36,12 @@
 
 <hr>
 
-## [Time2] : 
-### 
+## [Time2] : Mastering Machine Learning with Competitions
+### 발표자 : 이정윤 (MicroSoft 본사, OneML 대회 운영진)
+
+#### 1. KDD Cup
+1. KDD Cup이란?
+  * 유명한 KDD 학회의 Competition. 
+  * 2018년 KDD Cup은 6,000팀, 4,000소속, 49개국 참여
+2. 
+
