@@ -92,7 +92,9 @@
   .force("colide", d3.forceCollide(30))
   
 </code>
-  
+
+<hr>
+
 ## [Time4] : QA에 사용되는 Knowledge Embedding 응용 및 활용 방안
 ### 발표자 : 최동근 (Saltlux, Hong.univ senior)
 
@@ -111,4 +113,6 @@
   
   * IRQA : 검색 베이스 기반
   
-  
+<hr>
+
+## [Time5] : 
