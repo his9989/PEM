@@ -62,7 +62,34 @@
 
 <hr>
 
-## [Time3] : 
-### 발표자 : 
+## [Time3] : 대한민국 인맥지도
+### 발표자 : 강규영 (박스앤위스커, 데이터 시각화)
+### https://akngs.github.io/smallworld/
 
-#### 
+#### 관련 내용
+1. 데이터 수집 : wiki Data 사이트 사용 + sparql
+ * wiki data : 일반 대중이 데이터베이스를 수정.
+ * https://www.wikidata.org/wiki/Wikidata:Main_Page
+2. 주요 인물 찾기 : 파이썬 + NetworkX
+ * https://networkx.github.io
+ * 즉, 한 인물에 대하여 관계를 갖고 있는 인물 중 주요 인물을 찾는 알고리즘 구현
+ * 관계를 추가하기 위해 노드가 추가될 때 마다 sorting을 통해, 최단거리 계산해서 허브 구함
+ * 인간관계 데이터에서는 과하게 데이터가 길어질 것 같지 않지만, 다른 분야의 경우 느려질 수 있다.
+3. 그래프 탐색기 (d3js)
+ * https://d3js.org
+ * 난제: 노드가 많아지면 그래프는 어떻게 그리는가?
+   + 노드 간의 충돌을 방지하는 코드 구현
+   + 밑의 코드처럼 노드 설정
+4. 기타 유관 사이트
+ * 깃헙 페이지스 : https://pages.github.com/
+ * 지킬사이트 생성기 : https://jekyllrb.com/
+
+<code>
+ 
+ this.forceSim
+  .force("center", d3.forceCenter(0,0))
+  ...
+  .force("colide", d3.forceCollide(30))
+  
+</code>
+  
