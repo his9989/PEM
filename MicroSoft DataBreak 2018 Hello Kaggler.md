@@ -39,9 +39,29 @@
 ## [Time2] : Mastering Machine Learning with Competitions
 ### 발표자 : 이정윤 (MicroSoft 본사, OneML 대회 운영진)
 
-#### 1. KDD Cup
+#### KDD Cup
 1. KDD Cup이란?
   * 유명한 KDD 학회의 Competition. 
   * 2018년 KDD Cup은 6,000팀, 4,000소속, 49개국 참여
-2. 
+2. 내 전문 분야의 Competition에 도전하자.
+3. 머신러닝의 Competitons을 위한 Best Practices
+  * Feature Enginerring
+    + model부터 구축하지 말고, 데이터 분석 먼저
+  * Diverse Algorithms
+    + 고정적인 알고리즘 사용하지 말고, 여러 가지 알고리즘을 "시도"
+    + 생각치 못한 결과가 나올 수 있다.
+  * Cross Validation
+    + 가장 적합한 Validation을 적용하는게 중요.
+  * Ensemble
+    + 내가 시도한 모든 데이터를 조합
+    + Validation에서 사용한 기법에 알맞는 stacking 방법으로 수행
+  * Collaboration
+    + 협업. 구성원들이 만들어낸 결과물을 취합하기 위해, Validation set을 어떻게 할 지 공유해야함.
+  * Pipeline
 
+<hr>
+
+## [Time3] : 
+### 발표자 : 
+
+#### 
