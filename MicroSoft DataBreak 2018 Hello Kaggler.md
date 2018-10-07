@@ -58,6 +58,7 @@
   * Collaboration
     + 협업. 구성원들이 만들어낸 결과물을 취합하기 위해, Validation set을 어떻게 할 지 공유해야함.
   * Pipeline
+    + 위의 과정들, (Feature Algorithms, Cross Validation, Ensemble) 등의 일련의 머신러닝 작업 과정을 makefile처럼 착착착 수행하도록 하는 과정
 
 <hr>
 
