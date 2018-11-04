@@ -1,0 +1,106 @@
+# https://dbstjdans123.blog.me/221339651319
+# https://blog.naver.com/dbstjdans123/221339651319
+# https://github.com/GodMoonGoodman/NaverMap-Car-minimum-distance/blob/master/NaverMap.ipynb
+
+import requests as r
+import json
+http_header = {
+    'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+    'x-requested-with': 'XMLHttpRequest'
+}
+
+session = r.Session()
+session.headers.update(http_header)
+start = '서울시'
+end = '남양주시'
+search_distance_url_base = 'https://m.map.naver.com/spirra/findCarRoute.nhn?route=route3&output=json&result=web3&coord_type=latlng&search=2&car=0&mileage=12.4'
+
+
+def SEARCH_DISTANCE_URL(start_point, end_point):
+    return search_distance_url_base + '&start={}&destination={}'.format(start_point, end_point)
+
+def SEARCH_POINT_URL(q):
+    return 'https://m.map.naver.com/apis/search/poi?query={}&page=1'.format(q)
+
+def GET_END_POINT(q):
+    res = session.get(SEARCH_POINT_URL(q)).text
+    res_dict = json.loads(res)
+    x = res_dict['result']['address']['list'][0]['x']
+    y = res_dict['result']['address']['list'][0]['y']
+    name = res_dict['result']['address']['list'][0]['name']
+    return '{},{},{}'.format(x, y, name)
+
+def GET_INFO(start, end):
+    start_point = GET_END_POINT(start)
+    end_point = GET_END_POINT(end)
+
+    res = session.get(SEARCH_DISTANCE_URL(start_point, end_point)).text
+    res_dict = json.loads(res)
+
+    target = res_dict['routes'][0]['summary']
+    distance = target['distance']
+    sec = target['duration']
+    taxi_fare = target['taxi_fare']
+    print('검색완료')
+    print('출발지: {}, 도착지: {}'.format(start, end))
+    print('추천경로 이동 거리: {}km'.format(distance / 1000))
+    print('예상 소요시간: {}분'.format(sec / 60))
+    print('예상 택시요금: {}원'.format(taxi_fare))
+
+GET_INFO(start, end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================================
+2. 
+# Insoo Han
+# https://github.com/his9989
+
+from bs4 import BeautifulSoup
+import requests
+
+s_text = "경기도 시흥시 신현동 695-4"
+s_lng = "126.7638098"
+s_lat = "37.4091662"
+t1_text = "경상북도 칠곡군 왜관읍 177-1"
+t1_lat = "35.9953059"
+t1_lng = "128.4015434"
+t2_text = "경상북도 경산시 중방동 신대부적 장보고식자재마트"
+t2_lat = "35.8250555"
+t2_lng = "128.7415441"
+t3_text = "경상북도 경산시 진량읍 신상리 685-3 진량읍사무소"
+t3_lng = "128.8165513"
+t3_lat = "35.8741176"
+e_text = "경상북도 경산시 진량읍 신상리 685-3 진량읍사무소"
+e_lng = "128.8165513"
+e_lat = "35.8741176"
+
+## url 연결
+html ="https://map.naver.com/?sText=" + s_text + "&t2Type=SITE_1&t1lat=" + t1_lat + "&dtPathType=2&t2lng=" + t2_lng + "&t2Text=" + t2_text + "&mapMode=0&eText=" + e_text + "&t3Text=" + t3_text + "&t1Text=" + t1_text + "&t1lng=" + t1_lng + "&t3lng=" + t3_lng + "&dlevel=8&enc=b64&elng=" + e_lng + "&menu=route&t2lat=" + t2_lat + "&t3Type=SITE_1&elat=" + e_lat + "&pathType=0&slng=" + s_lng + "&t1Type=SITE_1&slat=" + s_lat + "&t3lat=" + t3_lat
+# html = "http://map.daum.net/?sX=522942&sY=1117020&eX=483163&eY=1127047&map_type=TYPE_MAP&map_hybrid=false&sName=%EC%9E%A0%EC%8B%A4%EB%82%98%EB%A3%A8%EC%97%AD%202%ED%98%B8%EC%84%A0&eName=%ED%99%8D%EB%8C%80%EC%9E%85%EA%B5%AC%EC%97%AD%202%ED%98%B8%EC%84%A0&target=car"
+# html = "https://map.naver.com/?sText=66qF7LmtIOyXhuydjA%3D%3D&t1lat=b02afd336e9c0a2184e5e361ddf51912&dtPathType=2&t2lng=6f89e15e02a6d5d33a8d56d310821ee0&t2Text=66qF7LmtIOyXhuydjA%3D%3D&lng=8db7fa08edf4f7d41c6782abc789a62e&mapMode=0&eText=66qF7LmtIOyXhuydjA%3D%3D&t3Text=66qF7LmtIOyXhuydjA%3D%3D&t1Text=66qF7LmtIOyXhuydjA%3D%3D&t1lng=584674a4086936ba95d63f8f3ea5e395&t3lng=02cc9d77bc19d0103fadac1193943756&lat=ed5fd36b46b00ad242342871d39cc65b&dlevel=12&enc=b64&elng=02cc9d77bc19d0103fadac1193943756&menu=route&t2lat=b3bf846792aa19b948b28bf5fbc33162&elat=e6a802a948600407454e9de4f3418634&pathType=0&slng=aeabc6dd70107f15007842c070f26e1e&slat=cdd695b2faa3b2e4d36c3c01233be266&t3lat=e6a802a948600407454e9de4f3418634"
+hdr = {'referer': 'https://www.naver.com/', 'User-Agent': 'Mozilla/5.0'} # 주의 : 이 부분이 없으면 봇이라고 인식함
+
+print(html)
+
+req = requests.get(html,headers=hdr) # 헤더 꼭 추가해주어야 한다
+
+# content = req.content
+content = req.text
+soup = BeautifulSoup(content, "html.parser")
+
+print(soup)
+
+
+

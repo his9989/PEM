@@ -1,0 +1,24 @@
+# Insoo Han
+# https://github.com/his9989
+
+# https://hyeshinoh.github.io/2018/09/29/web_08_requests/
+
+from bs4 import BeautifulSoup
+import urllib.request as req
+import requests
+from pandas.io.json import json_normalize
+import pickle
+import json
+
+# 이 링크 이용하면 text 형식으로 원하는 값을 얻을 수는 있다. 파싱 이용하면 구할 수 있긴 함.
+html = 'https://m.map.naver.com/spirra/findCarRoute.nhn?route=route3&output=json&result=web3&coord_type=latlng&search=2&car=0&mileage=12.4&start=127.1002863%2C37.5133134%2C%EC%9E%A0%EC%8B%A4%EC%97%AD+2%ED%98%B8%EC%84%A0&destination=126.9234080%2C37.5566195%2C%ED%99%8D%EB%8C%80%EC%9E%85%EA%B5%AC%EC%97%AD+2%ED%98%B8%EC%84%A0'
+
+content = requests.get(html)
+
+json_info = content.json()
+all_routes = json_info["routes"]
+
+
+
+print(all_routes)
+# title = soup.select()

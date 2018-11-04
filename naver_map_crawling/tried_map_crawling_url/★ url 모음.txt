@@ -1,0 +1,184 @@
+<다음>
+
+1. 출발도착 경로
+http://map.daum.net/?sX=522942&sY=1117020&eX=483163&eY=1127047&map_type=TYPE_MAP&map_hybrid=false&sName=%EC%9E%A0%EC%8B%A4%EB%82%98%EB%A3%A8%EC%97%AD%202%ED%98%B8%EC%84%A0&eName=%ED%99%8D%EB%8C%80%EC%9E%85%EA%B5%AC%EC%97%AD%202%ED%98%B8%EC%84%A0&target=car
+
+
+
+====================================================================================
+<네이버>
+
+0. 기본 map url
+https://map.naver.com/index.nhn?menu=route
+
+1. 기본형태
+https://map.naver.com/sText="이름"+"이름"&mapMode=0&eText="이름"+"이름"&edid=13466099&idx=0&elng=090cb755f7beae228112882881e9201e&sdid=11636758&eslng=&menu=route&eelat=&elat=be2a46b72136341774ada5c790f5d0a8&pathType=0&slng=c5a5edd5dcbd4967ec27a99720ee05cb&eelng=&sl
+
+------------------------------------------
+
+2. 요소별로 잘라보기
+https://map.naver.com/
+sText="이름"+"이름"&
+mapMode=0&
+eText="이름"+"이름"&
+edid=13466099&idx=0&
+elng=090cb755f7beae228112882881e9201e&
+sdid=11636758&
+eslng=&
+menu=route&
+eelat=&
+elat=be2a46b72136341774ada5c790f5d0a8&
+pathType=0&
+slng=c5a5edd5dcbd4967ec27a99720ee05cb&
+eelng=&
+slat=4de70f9529aa29ac1c6692f4297505f0&
+eslat=at=4de70f9529aa29ac1c6692f4297505f0&
+eslat=
+
+-------------------------------------
+
+3. 경유지 1개 있는 경우 요소별로 잘라서 분석
+https://map.naver.com/?
+sText=7J6g7Iuk7JetIDLtmLjshKA%3D				// start Text
+&dtPathType=2
+&lng=c2dd254416bf6233b3214c7e9c006f3d&mapMode=0	// 경유지인듯
+&eText=7ZmN64yA7J6F6rWs7JetIDLtmLjshKA%3D		// end Text
+&lat=0169db977a437fdd744f98ecb5669547			// 경유지인듯
+&dlevel=7
+&enc=b64
+&elng=b55828ededed75a1330683e645593ee5			// end lng
+&menu=route
+&elat=be2a46b72136341774ada5c790f5d0a8			// end lat
+&pathType=0
+&slng=179cb500b2585c6b8b851b4f5b1ad9e3			// start lng
+&slat=0e55a948e1339c7dec15c307408b78fc			// start lat
+
+-----------------------------------------
+
+4. 5경로의 경우
+<원본>
+https://map.naver.com/?
+sText=7J6g7Iuk7JetIDLtmLjshKA%3D
+&t2Type=SITE_1
+&t1lat=553e9739ce223592a9b4e3487a07bc7e
+&dtPathType=2
+&t2lng=6377a3bbd6872faa95a11692cfc429af
+&t2Text=7Iuc7LKt7JetIDHtmLjshKA%3D
+&lng=d9ff624c1b9fde83ed1535eaf3dbdbc0
+&mapMode=0
+&eText=7ZmN64yA7J6F6rWs7JetIDLtmLjshKA%3D
+&t3Text=7Iug7LSM7JetIDLtmLjshKA%3D
+&t1Text=64%2BZ64yA66y47Jet7IKs66y47ZmU6rO17JuQ7JetIDLtmLjshKA%3D
+&t1lng=f58f5ba1f13c35299f066620fca1f502
+&t3lng=6d3a033937e6f24ebfdf6ea59004c408
+&lat=e1af1aaf14d0d455f608cc95c3cd09c2
+&dlevel=8
+&enc=b64
+&t1did=13479735
+&elng=b55828ededed75a1330683e645593ee5
+&menu=route
+&t2did=13479326
+&t2lat=48cbd47d427ca1179ff8e9982d65bcbe
+&t3Type=SITE_1
+&elat=be2a46b72136341774ada5c790f5d0a8
+&t3did=11636653
+&pathType=0
+&slng=179cb500b2585c6b8b851b4f5b1ad9e3
+&t1Type=SITE_1
+&slat=0e55a948e1339c7dec15c307408b78fc
+&t3lat=fb77bb2846f905e11e53490c6f725eb8
+
+<적용>
+https://map.naver.com/?
+sText=잠실역 2호선
+&t2Type=SITE_1
+&t1lat=553e9739ce223592a9b4e3487a07bc7e
+&dtPathType=2
+&t2lng=6377a3bbd6872faa95a11692cfc429af
+&t2Text=시청역 1호선
+&lng=d9ff624c1b9fde83ed1535eaf3dbdbc0
+&mapMode=0
+&eText=홍대입구역 2호선
+&t3Text=신촌역 2호선
+&t1Text=동대문역사문화공원역 2호선
+&t1lng=f58f5ba1f13c35299f066620fca1f502
+&t3lng=6d3a033937e6f24ebfdf6ea59004c408
+&lat=e1af1aaf14d0d455f608cc95c3cd09c2
+&dlevel=8
+&enc=b64
+&t1did=13479735
+&elng=b55828ededed75a1330683e645593ee5
+&menu=route
+&t2did=13479326
+&t2lat=48cbd47d427ca1179ff8e9982d65bcbe
+&t3Type=SITE_1
+&elat=be2a46b72136341774ada5c790f5d0a8
+&t3did=11636653
+&pathType=0
+&slng=179cb500b2585c6b8b851b4f5b1ad9e3
+&t1Type=SITE_1
+&slat=0e55a948e1339c7dec15c307408b78fc
+&t3lat=fb77bb2846f905e11e53490c6f725eb8
+
+<분석>
+https://map.naver.com/?
+sText=7J6g7Iuk7JetIDLtmLjshKA%3D							// start Text
+&t2Type=SITE_1									// 경유지2 Type
+&t1lat=553e9739ce223592a9b4e3487a07bc7e						// 경유지1 lat
+&dtPathType=2
+&t2lng=6377a3bbd6872faa95a11692cfc429af						// 경유지2 lng
+&t2Text=7Iuc7LKt7JetIDHtmLjshKA%3D						// 경유지2 Text
+&lng=46612f87721d587978c8d08d21c5f8b4						// ? lng
+&mapMode=0				
+&eText=7ZmN64yA7J6F6rWs7JetIDLtmLjshKA%3D					// end Text
+&t3Text=7Iug7LSM7JetIDLtmLjshKA%3D						// 경유지3 Text
+&t1Text=64%2BZ64yA66y47Jet7IKs66y47ZmU6rO17JuQ7JetIDLtmLjshKA%3D			// 경유지1 Text
+&t1lng=f58f5ba1f13c35299f066620fca1f502						// 경유지1 lng
+&t3lng=6d3a033937e6f24ebfdf6ea59004c408						// 경유지3 lng
+&lat=c2ca0e42728b8057987cf6e122799344						// ? lat
+&dlevel=8
+&enc=b64
+&t1did=13479735									// 경유지1 did
+&elng=b55828ededed75a1330683e645593ee5						// end lng
+&menu=route					
+&t2did=13479326									// 경유지2 did
+&t2lat=48cbd47d427ca1179ff8e9982d65bcbe						// 경유지2 lat 
+&t3Type=SITE_1									// 경유지3 Type
+&elat=be2a46b72136341774ada5c790f5d0a8						// end lat
+&t3did=11636653									// 경유지 3 did
+&pathType=0
+&slng=179cb500b2585c6b8b851b4f5b1ad9e3						// start lng
+&t1Type=SITE_1									// 경유지1 Type
+&slat=0e55a948e1339c7dec15c307408b78fc						// start lat
+&t3lat=fb77bb2846f905e11e53490c6f725eb8						// 경유지3 lat
+
+text, lat, lng, did, type
+text : 이름
+lat, lng : 위경도
+type : SITE_1
+did : 
+start	text, lng, lat
+t1	text, lat, lng, did, type
+t2	text, lng, lat, did, type
+t3	Text, lng, lat, type, did
+end	text, lng, lat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+======================================================
+[html]
+
+<table cellpadding="0" cellspacing="0" width="462"> <tr> <td style="border:1px solid #cecece;"><a href="https://map.naver.com/?sText=66qF7LmtIOyXhuydjA%3D%3D&t1lat=b02afd336e9c0a2184e5e361ddf51912&dtPathType=2&t2lng=6f89e15e02a6d5d33a8d56d310821ee0&t2Text=66qF7LmtIOyXhuydjA%3D%3D&lng=8db7fa08edf4f7d41c6782abc789a62e&mapMode=0&eText=66qF7LmtIOyXhuydjA%3D%3D&t3Text=66qF7LmtIOyXhuydjA%3D%3D&t1Text=66qF7LmtIOyXhuydjA%3D%3D&t1lng=584674a4086936ba95d63f8f3ea5e395&t3lng=02cc9d77bc19d0103fadac1193943756&lat=ed5fd36b46b00ad242342871d39cc65b&dlevel=12&enc=b64&elng=02cc9d77bc19d0103fadac1193943756&menu=route&t2lat=b3bf846792aa19b948b28bf5fbc33162&elat=e6a802a948600407454e9de4f3418634&pathType=0&slng=aeabc6dd70107f15007842c070f26e1e&slat=cdd695b2faa3b2e4d36c3c01233be266&t3lat=e6a802a948600407454e9de4f3418634" target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1541006241391_-838835382" width="460" height="340" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:top;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2018.11.1</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="https://map.naver.com/?sText=66qF7LmtIOyXhuydjA%3D%3D&t1lat=b02afd336e9c0a2184e5e361ddf51912&dtPathType=2&t2lng=6f89e15e02a6d5d33a8d56d310821ee0&t2Text=66qF7LmtIOyXhuydjA%3D%3D&lng=8db7fa08edf4f7d41c6782abc789a62e&mapMode=0&eText=66qF7LmtIOyXhuydjA%3D%3D&t3Text=66qF7LmtIOyXhuydjA%3D%3D&t1Text=66qF7LmtIOyXhuydjA%3D%3D&t1lng=584674a4086936ba95d63f8f3ea5e395&t3lng=02cc9d77bc19d0103fadac1193943756&lat=ed5fd36b46b00ad242342871d39cc65b&dlevel=12&enc=b64&elng=02cc9d77bc19d0103fadac1193943756&menu=route&t2lat=b3bf846792aa19b948b28bf5fbc33162&elat=e6a802a948600407454e9de4f3418634&pathType=0&slng=aeabc6dd70107f15007842c070f26e1e&slat=cdd695b2faa3b2e4d36c3c01233be266&t3lat=e6a802a948600407454e9de4f3418634" target="_blank">지도 크게 보기</a> </td> <td width="98" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="http://www.nhncorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
